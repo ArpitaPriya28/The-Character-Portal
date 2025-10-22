@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Friends Quiz</title>
+  <link rel="stylesheet" href="style/friends.css" />
+</head>
+<body>
+
+    <audio id="themeAudio" autoplay loop>
+    <source src="sounds/friends/friends_theme.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1>Which F.R.I.E.N.D.S Character Are You?</h1>
+
+    <div class="question">
+      <p>1. How do you spend your free time?</p>
+      <!-- A <label> tag is used to describe or name an input field (like a checkbox, radio button, or text box).
+It tells the user what that input is for — and it also makes the input easier to click.
+<input type="radio" ...> → is the radio button -->
+      <label><input type="radio" name="q1" value="joey"> Eating or flirting</label>
+      <label><input type="radio" name="q1" value="rachel"> Shopping or styling</label>
+      <label><input type="radio" name="q1" value="ross"> Reading or researching</label>
+      <label><input type="radio" name="q1" value="phoebe"> Playing music or meditating</label>
+      <label><input type="radio" name="q1" value="monica"> Cleaning or cooking</label>
+      <label><input type="radio" name="q1" value="chandler"> Making jokes or relaxing</label>
+    </div>
+
+    <div class="question">
+  <p>2. You’re stuck in traffic on your way to an important meeting. What’s your reaction?</p>
+  <label><input type="radio" name="q2" value="ross"> Analyze alternate routes using logic</label>
+  <label><input type="radio" name="q2" value="phoebe"> Enjoy the moment and sing loudly</label>
+  <label><input type="radio" name="q2" value="monica"> Panic slightly but take control</label>
+  <label><input type="radio" name="q2" value="joey"> Rehearse lines or check your hair</label>
+  <label><input type="radio" name="q2" value="chandler"> Make sarcastic remarks to yourself</label>
+  <label><input type="radio" name="q2" value="rachel"> Text your friends and scroll Instagram</label>
+</div>
+
+  <div class="question">
+  <p>3. A friend forgets your birthday. What do you do?</p>
+  <label><input type="radio" name="q3" value="phoebe"> Say it’s fine but sing them a passive-aggressive song</label>
+  <label><input type="radio" name="q3" value="chandler"> Joke about how forgettable you are</label>
+  <label><input type="radio" name="q3" value="monica"> Get upset but try to hide it with a smile</label>
+  <label><input type="radio" name="q3" value="joey"> Immediately forgive and suggest pizza</label>
+  <label><input type="radio" name="q3" value="ross"> Lecture them about the importance of memory</label>
+  <label><input type="radio" name="q3" value="rachel"> Act like you don’t care...but you do</label>
+</div>
+
+  <div class="question">
+  <p>4. You find a wallet full of cash on the street. What do you do?</p>
+  <label><input type="radio" name="q4" value="monica"> Hand it to the police immediately</label>
+  <label><input type="radio" name="q4" value="phoebe"> Keep it unless the universe gives a sign not to</label>
+  <label><input type="radio" name="q4" value="ross"> Try to trace the owner logically</label>
+  <label><input type="radio" name="q4" value="joey"> Think of buying pizza and then feel guilty</label>
+  <label><input type="radio" name="q4" value="chandler"> Make a joke and then overthink it</label>
+  <label><input type="radio" name="q4" value="rachel"> Check if it’s from a designer store first</label>
+</div>
+
+  <div class="question">
+  <p>5. You walk into a party and don’t know anyone. What do you do?</p>
+  <label><input type="radio" name="q5" value="joey"> Flirt with the first attractive person you see</label>
+  <label><input type="radio" name="q5" value="rachel"> Check your outfit, grab a drink, and mingle</label>
+  <label><input type="radio" name="q5" value="ross"> Look for a bookshelf or pet to bond with</label>
+  <label><input type="radio" name="q5" value="chandler"> Crack a sarcastic joke to break the ice</label>
+  <label><input type="radio" name="q5" value="monica"> Offer to help with organizing food or drinks</label>
+  <label><input type="radio" name="q5" value="phoebe"> Start dancing alone and hope others join</label>
+</div>
+
+  <div class="question">
+  <p>6. Your ideal vacation would be...</p>
+  <label><input type="radio" name="q6" value="rachel"> Fashion week in Paris</label>
+  <label><input type="radio" name="q6" value="joey"> A beach with endless food and sun</label>
+  <label><input type="radio" name="q6" value="ross"> A museum tour across Europe</label>
+  <label><input type="radio" name="q6" value="phoebe"> A nature retreat with spiritual workshops</label>
+  <label><input type="radio" name="q6" value="monica"> A luxury spa with scheduled activities</label>
+  <label><input type="radio" name="q6" value="chandler"> A quiet cabin... with no social interaction</label>
+</div>
+
+  <div class="question">
+  <p>7. What’s your biggest pet peeve?</p>
+  <label><input type="radio" name="q7" value="monica"> Disorganization</label>
+  <label><input type="radio" name="q7" value="ross"> People misusing grammar</label>
+  <label><input type="radio" name="q7" value="rachel"> People copying your outfit</label>
+  <label><input type="radio" name="q7" value="joey"> Sharing food</label>
+  <label><input type="radio" name="q7" value="phoebe"> Negative energy</label>
+  <label><input type="radio" name="q7" value="chandler"> Awkward silences</label>
+</div>
+
+  <div class="question">
+  <p>8. What’s your secret talent?</p>
+  <label><input type="radio" name="q8" value="phoebe"> Writing eccentric songs</label>
+  <label><input type="radio" name="q8" value="ross"> Playing the keyboard (poorly, but with passion)</label>
+  <label><input type="radio" name="q8" value="joey"> Picking up people effortlessly</label>
+  <label><input type="radio" name="q8" value="monica"> Competitive towel-folding</label>
+  <label><input type="radio" name="q8" value="chandler"> Making people laugh even in crisis</label>
+  <label><input type="radio" name="q8" value="rachel"> Styling hair without trying</label>
+</div>
+
+  <div class="question">
+  <p>9. You’ve been told to give a toast at a wedding. What do you do?</p>
+  <label><input type="radio" name="q9" value="chandler"> Panic, then deliver something funny</label>
+  <label><input type="radio" name="q9" value="monica"> Plan it days in advance with cue cards</label>
+  <label><input type="radio" name="q9" value="joey"> Wing it with charm and confidence</label>
+  <label><input type="radio" name="q9" value="rachel"> Talk about love in a dreamy way</label>
+  <label><input type="radio" name="q9" value="ross"> Make it historical and awkwardly long</label>
+  <label><input type="radio" name="q9" value="phoebe"> Sing your speech in your own lyrics</label>
+</div>
+
+  <div class="question">
+  <p>10. What's your biggest strength in friendships?</p>
+  <label><input type="radio" name="q10" value="joey"> Loyalty without conditions</label>
+  <label><input type="radio" name="q10" value="rachel"> Emotional support and style advice</label>
+  <label><input type="radio" name="q10" value="monica"> Hosting and always being there</label>
+  <label><input type="radio" name="q10" value="ross"> Providing facts and solutions</label>
+  <label><input type="radio" name="q10" value="chandler"> Making bad days a little lighter</label>
+  <label><input type="radio" name="q10" value="phoebe"> Accepting people as they are</label>
+</div>
+
+
+    <button onclick="submitQuiz()">Revele my Character</button>
+  </div>
+
+  <script src="scripts/friends.js"></script>
+</body>
+</html>
