@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Stranger Things Character</title>
+  <link rel="stylesheet" href="../style/stranger_result.css" />
+</head>
+<body class="stranger-bg">
+  <div class="container">
+    <h1>The Upside Down Reveals...</h1>
+    <div id="result" class="result-box"></div>
+    <button onclick="window.location.href='stranger.html'">Try Again 🔁</button>
+  </div>
+
+  <!-- Character-specific audio clips -->
+  <audio id="steveAudio" src="sounds/Stranger/steve_ahoyladies_st3.mp3"></audio>
+  <audio id="dustinAudio" src="sounds/Stranger/dustin_st.mp3"></audio>
+  <audio id="elevenAudio" src="sounds/Stranger/bad_place.mp3"></audio>
+  <audio id="maxAudio" src="sounds/Stranger/max.mp3"></audio>
+  <audio id="nancyAudio" src="sounds/Stranger/nancy.mp3"></audio>
+  <audio id="mikeAudio" src="sounds/Stranger/mike.mp3"></audio>
+  <audio id="lucasAudio" src="sounds/Stranger/lucus.mp3"></audio>
+  <audio id="willAudio" src="sounds/Stranger/will.mp3"></audio>
+  <audio id="jonathanAudio" src="sounds/Stranger/jonathan.mp3"></audio>
+  <audio id="hopperAudio" src="sounds/Stranger/hopper_coffee.mp3"></audio>
+  <audio id="joyceAudio" src="sounds/Stranger/joyce.mp3"></audio>
+  <audio id="ericaAudio" src="sounds/Stranger/erica.mp3"></audio>
+  <audio id="robinAudio" src="sounds/Stranger/hey_dingus.mp3"></audio>
+  <audio id="argyleAudio" src="sounds/Stranger/angyle.mp3"></audio>
+  <audio id="eddieAudio" src="sounds/Stranger/eddie_munson_wake_up.mp3"></audio>
+  <audio id="murrayAudio" src="sounds/Stranger/murray.mp3"></audio>
+  <audio id="papaAudio" src="sounds/Stranger/papa.mp3"></audio>
+  <audio id="vecnaAudio" src="sounds/Stranger/vecna_clock.mp3"></audio>
+
+  <script>
+    const character = localStorage.getItem("strangerResult");
+    const resultDiv = document.getElementById("result");
+
+    if (character) {
+      const charName = character.charAt(0).toUpperCase() + character.slice(1);
+      resultDiv.textContent = `You are ${charName} from Stranger Things!`;
+
+      const introAudio = document.getElementById("introAudio");
+      const charAudio = document.getElementById(character + "Audio");
+
+      if (introAudio && charAudio) {
+        introAudio.play().catch(err => console.log("Intro autoplay blocked:", err));
+        introAudio.addEventListener("ended", () => {
+          charAudio.play().catch(err => console.log("Character audio blocked:", err));
+        });
+      } else if (charAudio) {
+        charAudio.play().catch(err => console.log("Character audio blocked:", err));
+      }
+    } else {
+      resultDiv.textContent = "No result found. Please take the quiz first.";
+    }
+  </script>
+</body>
+</html>
