@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Narnia Character</title>
+  <link rel="stylesheet" href="../style/narnia_result.css" />
+</head>
+<body class="narnia-bg">
+  <div class="container">
+    <h1>Aslan Has Chosen 🦁</h1>
+    <div id="result" class="result-box"></div>
+    <button onclick="window.location.href='narnia.html'">Try Again 🔁</button>
+  </div>
+
+  <!-- Character Audios -->
+  <audio id="lucyAudio" src="sounds/narnia/lucy.mp3"></audio>
+  <audio id="edmundAudio" src="sounds/narnia/edmud.mp3"></audio>
+  <audio id="peterAudio" src="sounds/narnia/peter.mp3"></audio>
+  <audio id="susanAudio" src="sounds/narnia/susan.mp3"></audio>
+
+  <script>
+    const character = localStorage.getItem("narniaResult");
+    const resultDiv = document.getElementById("result");
+
+    if (character) {
+      const charName = character.charAt(0).toUpperCase() + character.slice(1);
+      resultDiv.textContent = `You are ${charName} of Narnia!`;
+
+      const audio = document.getElementById(character + "Audio");
+      if (audio) {
+        window.addEventListener("DOMContentLoaded", () => {
+          audio.play().catch(err => console.log("Autoplay blocked:", err));
+        });
+      }
+    } else {
+      resultDiv.textContent = "No result found. Please take the quiz first.";
+    }
+  </script>
+</body>
+</html>
