@@ -73,7 +73,7 @@ Custom Audio & Fonts – for immersive user experience
 
 Clone the repository
 
-git clone https://github.com/your-username/Character-Portal.git
+git clone https://github.com/ArpitaPriya28/The-Character-Portal.git
 
 
 Open any quiz HTML file (e.g., index.html) in your browser.
