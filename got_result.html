@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Game of Thrones House</title>
+  <link rel="stylesheet" href="style/got_result.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Your Game of Thrones House </h1>
+    <div id="result" class="result-box"></div>
+    <button onclick="window.location.href='got.html'">Try Again 🔁</button>
+  </div>
+
+  <!-- House-specific Audios -->
+  <audio id="starkAudio" src="sounds/GOT/the_north_remembers.mp3"></audio>
+  <audio id="lannisterAudio" src="sounds/GOT/lanister.mp3"></audio>
+  <audio id="targaryenAudio" src="sounds/GOT/tagareon.mp3"></audio>
+  <audio id="baratheonAudio" src="sounds/GOT/baratheon.mp3"></audio>
+
+  <script>
+    const house = localStorage.getItem("gotResult");
+    const resultDiv = document.getElementById("result");
+
+    if (house) {
+      const houseName = house.charAt(0).toUpperCase() + house.slice(1);
+      resultDiv.textContent = `You belong to House ${houseName}!`;
+
+      const audio = document.getElementById(house + "Audio");
+      if (audio) {
+        window.addEventListener("DOMContentLoaded", () => {
+          audio.play().catch(err => console.log("Autoplay blocked:", err));
+        });
+      }
+    } else {
+      resultDiv.textContent = "No result found. Please take the quiz first.";
+    }
+  </script>
+</body>
+</html>
