@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game of Thrones Character Quiz</title>
+  <link rel="stylesheet" href="style/got.css">
+</head>
+<body>
+
+    <audio id="themeAudio" autoplay loop>
+    <source src="sounds/GOT/got_theme.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+
+  <div class="container">
+    <h1 class="heading">Which Game of Thrones House Do You Belong To?</h1>
+
+    <form id="quizForm">
+      <div class="question">
+        <p>1. You walk into a room full of strangers. What do you do first?</p>
+        <label><input type="radio" name="q1" value="stark"> Observe quietly</label>
+        <label><input type="radio" name="q1" value="lannister"> Make a powerful impression</label>
+        <label><input type="radio" name="q1" value="targaryen"> Command attention without trying</label>
+        <label><input type="radio" name="q1" value="baratheon"> Challenge someone to a game or fight</label>
+      </div>
+
+      <div class="question">
+        <p>2. If you could rule, how would your kingdom be remembered?</p>
+        <label><input type="radio" name="q2" value="stark"> Just and fair</label>
+        <label><input type="radio" name="q2" value="lannister"> Rich and influential</label>
+        <label><input type="radio" name="q2" value="targaryen"> Passionate and revolutionary</label>
+        <label><input type="radio" name="q2" value="baratheon"> Strong and unshaken</label>
+      </div>
+
+      <div class="question">
+        <p>3. What type of legacy matters most to you?</p>
+        <label><input type="radio" name="q3" value="stark"> Being remembered as honorable</label>
+        <label><input type="radio" name="q3" value="lannister"> Power that lasts centuries</label>
+        <label><input type="radio" name="q3" value="targaryen"> Changing the world’s destiny</label>
+        <label><input type="radio" name="q3" value="baratheon"> Dying with unmatched glory</label>
+      </div>
+
+      <div class="question">
+        <p>4. You find a magical sword. What do you do?</p>
+        <label><input type="radio" name="q4" value="stark"> Use it to protect your people</label>
+        <label><input type="radio" name="q4" value="lannister"> Keep it secret and use it wisely</label>
+        <label><input type="radio" name="q4" value="targaryen"> Wield it to reclaim what's yours</label>
+        <label><input type="radio" name="q4" value="baratheon"> Take on your rivals immediately</label>
+      </div>
+
+      <div class="question">
+        <p>5. Your worst fear?</p>
+        <label><input type="radio" name="q5" value="stark"> Betrayal by those I trust</label>
+        <label><input type="radio" name="q5" value="lannister"> Losing control and status</label>
+        <label><input type="radio" name="q5" value="targaryen"> Being forgotten in history</label>
+        <label><input type="radio" name="q5" value="baratheon"> Living a life without action</label>
+      </div>
+
+      <div class="question">
+        <p>6. In a crisis, what would you do first?</p>
+        <label><input type="radio" name="q6" value="stark"> Rally your closest allies to protect your people</label>
+        <label><input type="radio" name="q6" value="lannister"> Calculate how to turn it to your advantage</label>
+        <label><input type="radio" name="q6" value="targaryen"> Unleash your wrath on those responsible</label>
+        <label><input type="radio" name="q6" value="baratheon"> Act immediately, even without a plan</label>
+      </div>
+
+      <div class="question">
+        <p>7. If you had a Valyrian steel sword, you'd use it to...</p>
+        <label><input type="radio" name="q7" value="stark"> Defend the realm with honor</label>
+        <label><input type="radio" name="q7" value="lannister"> Show your superiority</label>
+        <label><input type="radio" name="q7" value="targaryen"> Wield power and demand loyalty</label>
+        <label><input type="radio" name="q7" value="baratheon"> Rush into battle with fury</label>
+      </div>
+
+      <div class="question">
+        <p>8. Which of these traits would your enemies fear the most in you?</p>
+        <label><input type="radio" name="q8" value="stark"> Your undying loyalty</label>
+        <label><input type="radio" name="q8" value="lannister"> Your cunning mind</label>
+        <label><input type="radio" name="q8" value="targaryen"> Your fiery determination</label>
+        <label><input type="radio" name="q8" value="baratheon"> Your brute strength</label>
+      </div>
+
+      <div class="question">
+        <p>9. If you ruled the Seven Kingdoms, your first law would be:</p>
+        <label><input type="radio" name="q9" value="stark"> Protect the North and uphold justice</label>
+        <label><input type="radio" name="q9" value="lannister"> Expand the treasury and solidify alliances</label>
+        <label><input type="radio" name="q9" value="targaryen"> Free the oppressed and reshape the world</label>
+        <label><input type="radio" name="q9" value="baratheon"> Enforce discipline and punish betrayal swiftly</label>
+      </div>
+
+      <div class="question">
+        <p>10. You discover a betrayal in your court. You:</p>
+        <label><input type="radio" name="q10" value="stark"> Confront them and offer a chance to explain</label>
+        <label><input type="radio" name="q10" value="lannister"> Use it as leverage for your own gain</label>
+        <label><input type="radio" name="q10" value="targaryen"> Burn it all down — betrayal is unforgivable</label>
+        <label><input type="radio" name="q10" value="baratheon"> Challenge them head-on in front of all</label>
+      </div>
+
+      <button type="submit">Discover your House</button>
+    </form>
+  </div>
+
+  <script src="scripts/got.js"></script>
+</body>
+</html>
