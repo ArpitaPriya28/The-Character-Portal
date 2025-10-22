@@ -98,6 +98,16 @@ Include AI-based personality prediction
 
 Add more universes like Marvel, DC, and Percy Jackson
 
+###  Examples
+
+<img width="1918" height="947" alt="Screenshot 2025-10-23 015404" src="https://github.com/user-attachments/assets/703155fe-db2d-42fe-98fe-70846a2f5de2" />
+
+<img width="1919" height="945" alt="Screenshot 2025-10-23 015434" src="https://github.com/user-attachments/assets/406e7066-3ad9-477a-95b2-6d4a0c48c19a" />
+
+<img width="1919" height="934" alt="Screenshot 2025-10-23 015448" src="https://github.com/user-attachments/assets/de11c518-b0b0-46ab-b9f5-ce19bb5418c9" />
+
+<img width="1919" height="943" alt="Screenshot 2025-10-23 015536" src="https://github.com/user-attachments/assets/5372f64a-f034-490f-8c4b-54507bcd7656" />
+
 
 🪄 Author
 
