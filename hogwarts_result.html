@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Hogwarts House</title>
+  <link rel="stylesheet" href="style/hogwarts_result.css" />
+</head>
+<body class="hogwarts-bg">
+  <div class="container">
+    <h1>Your Sorting Hat Result 🧙</h1>
+    <div id="result" class="result-box"></div>
+    <button onclick="window.location.href='hogwarts.html'">Try Again 🔁</button>
+  </div>
+
+  <!-- Sorting Hat House Audios -->
+  <audio id="gryffindorAudio" src="sounds/hogwarts/gryffindor.mp3"></audio>
+  <audio id="slytherinAudio" src="sounds/hogwarts/slatheran.mp3"></audio>
+  <audio id="ravenclawAudio" src="sounds/hogwarts/ravenclaw.mp3"></audio>
+  <audio id="hufflepuffAudio" src="sounds/hogwarts/hufflepuff.mp3"></audio>
+
+  <script>
+    const house = localStorage.getItem("hogwartsHouse");
+    const resultDiv = document.getElementById("result");
+
+    if (house) {
+      const houseName = house.charAt(0).toUpperCase() + house.slice(1);
+      resultDiv.textContent = `You belong to ${houseName}!`;
+
+      const audio = document.getElementById(house + "Audio");
+      if (audio) {
+        // Play once when page loads
+        window.addEventListener("DOMContentLoaded", () => {
+          audio.play().catch(err => console.log("Autoplay blocked:", err));
+        });
+      }
+    } else {
+      resultDiv.textContent = "No result found. Please take the quiz first.";
+    }
+  </script>
+</body>
+</html>
