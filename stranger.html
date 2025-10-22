@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stranger Things Character Quiz</title>
+  <link rel="stylesheet" href="style/stranger.css">
+</head>
+<body>
+
+  <audio id="themeAudio" autoplay loop>
+    <source src="sounds/Stranger/stranger_things.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1 class="heading">Which Stranger Things Character Are You?</h1>
+
+    <form id="quizForm">
+      <div class="question">
+        <p>1. What's your role in a friend group?</p>
+        <label><input type="radio" name="q1" value="mike"> The leader</label>
+        <label><input type="radio" name="q1" value="lucas"> The realist</label>
+        <label><input type="radio" name="q1" value="dustin"> The brains</label>
+        <label><input type="radio" name="q1" value="will"> The quiet thinker</label>
+      </div>
+
+      <div class="question">
+        <p>2. What scares you the most?</p>
+        <label><input type="radio" name="q2" value="vecna"> Losing control of your mind</label>
+        <label><input type="radio" name="q2" value="joyce"> Losing loved ones</label>
+        <label><input type="radio" name="q2" value="hopper"> Failing your responsibilities</label>
+        <label><input type="radio" name="q2" value="nancy"> Being underestimated</label>
+      </div>
+
+      <div class="question">
+        <p>3. Choose a superpower:</p>
+        <label><input type="radio" name="q3" value="eleven"> Telekinesis</label>
+        <label><input type="radio" name="q3" value="papa"> Mind control</label>
+        <label><input type="radio" name="q3" value="robin"> Multilingual genius</label>
+        <label><input type="radio" name="q3" value="steve"> Expert with weapons</label>
+      </div>
+
+      <div class="question">
+        <p>4. Pick a weapon to defend yourself:</p>
+        <label><input type="radio" name="q4" value="eddie"> Electric guitar</label>
+        <label><input type="radio" name="q4" value="hopper"> Shotgun</label>
+        <label><input type="radio" name="q4" value="max"> Skateboard</label>
+        <label><input type="radio" name="q4" value="jonathan"> Camera (and bravery)</label>
+      </div>
+
+      <div class="question">
+        <p>5. What's your weekend vibe?</p>
+        <label><input type="radio" name="q5" value="argyle"> Chilling and surfing</label>
+        <label><input type="radio" name="q5" value="murray"> Conspiracy theories & vodka</label>
+        <label><input type="radio" name="q5" value="erica"> Sassy domination in DnD</label>
+        <label><input type="radio" name="q5" value="lucas"> Practicing sports</label>
+      </div>
+
+      <div class="question">
+        <p>6. What's your love language?</p>
+        <label><input type="radio" name="q6" value="nancy"> Acts of bravery</label>
+        <label><input type="radio" name="q6" value="mike"> Deep emotional support</label>
+        <label><input type="radio" name="q6" value="max"> Loyal silence</label>
+        <label><input type="radio" name="q6" value="robin"> Humor and honesty</label>
+      </div>
+
+      <div class="question">
+        <p>7. What’s your go-to phrase?</p>
+        <label><input type="radio" name="q7" value="dustin"> “Never tell me the odds!”</label>
+        <label><input type="radio" name="q7" value="steve"> “I'm babysitting again, aren't I?”</label>
+        <label><input type="radio" name="q7" value="eleven"> “Friends don’t lie.”</label>
+        <label><input type="radio" name="q7" value="hopper"> “Keep the door open… three inches.”</label>
+      </div>
+
+      <div class="question">
+        <p>8. How do you handle conflict?</p>
+        <label><input type="radio" name="q8" value="vecna"> Manipulate from the shadows</label>
+        <label><input type="radio" name="q8" value="joyce"> Get emotional and charge in</label>
+        <label><input type="radio" name="q8" value="erica"> Sarcastic sass + action</label>
+        <label><input type="radio" name="q8" value="papa"> Control and dominate</label>
+      </div>
+
+      <div class="question">
+        <p>9. Pick your outfit aesthetic:</p>
+        <label><input type="radio" name="q9" value="argyle"> Tie-dye and vans</label>
+        <label><input type="radio" name="q9" value="eddie"> Leather and metal</label>
+        <label><input type="radio" name="q9" value="murray"> Bathrobe and chaos</label>
+        <label><input type="radio" name="q9" value="will"> Retro basics</label>
+      </div>
+
+      <div class="question">
+        <p>10. What’s your dream escape?</p>
+        <label><input type="radio" name="q10" value="eleven"> A cabin in peace with someone you trust</label>
+        <label><input type="radio" name="q10" value="steve"> A beach with kids you protect</label>
+        <label><input type="radio" name="q10" value="dustin"> A NASA internship</label>
+        <label><input type="radio" name="q10" value="robin"> A record shop full of secrets</label>
+      </div>
+
+      <div class="question">
+  <p>11. What's your reaction to a government conspiracy?</p>
+  <label><input type="radio" name="q11" value="murray"> Expose it with evidence</label>
+  <label><input type="radio" name="q11" value="joyce"> Trust your gut and fight it</label>
+  <label><input type="radio" name="q11" value="jonathan"> Quietly document and investigate</label>
+  <label><input type="radio" name="q11" value="hopper"> Storm in and demand answers</label>
+</div>
+
+<div class="question">
+  <p>12. How do you recharge after a long day?</p>
+  <label><input type="radio" name="q12" value="argyle"> Smoking and deep talks</label>
+  <label><input type="radio" name="q12" value="will"> Drawing or reflecting in silence</label>
+  <label><input type="radio" name="q12" value="nancy"> Finishing unfinished tasks</label>
+  <label><input type="radio" name="q12" value="steve"> Watching cheesy movies with friends</label>
+</div>
+
+<div class="question">
+  <p>13. How do you express love?</p>
+  <label><input type="radio" name="q13" value="eleven"> Through fierce loyalty and action</label>
+  <label><input type="radio" name="q13" value="mike"> Emotional vulnerability</label>
+  <label><input type="radio" name="q13" value="lucas"> Small, meaningful gestures</label>
+  <label><input type="radio" name="q13" value="max"> Shared silence and protection</label>
+</div>
+
+<div class="question">
+  <p>14. Which quote resonates with you?</p>
+  <label><input type="radio" name="q14" value="vecna"> “Everyone breaks. It’s how the world works.”</label>
+  <label><input type="radio" name="q14" value="robin"> “I’m a mess, but at least I’m honest.”</label>
+  <label><input type="radio" name="q14" value="eddie"> “You can’t spell America without Erica!”</label>
+  <label><input type="radio" name="q14" value="hopper"> “You can’t hide from the truth.”</label>
+</div>
+
+<div class="question">
+  <p>15. If someone wronged your best friend, what would you do?</p>
+  <label><input type="radio" name="q15" value="steve"> Stand up for them immediately</label>
+  <label><input type="radio" name="q15" value="dustin"> Create a clever plan for revenge</label>
+  <label><input type="radio" name="q15" value="erica"> Roast them mercilessly</label>
+  <label><input type="radio" name="q15" value="eleven"> Use powers to teach them a lesson</label>
+</div>
+
+<div class="question">
+  <p>16. Your ideal job?</p>
+  <label><input type="radio" name="q16" value="jonathan"> Photographer or journalist</label>
+  <label><input type="radio" name="q16" value="eddie"> Musician or band frontman</label>
+  <label><input type="radio" name="q16" value="robin"> Cryptanalyst or translator</label>
+  <label><input type="radio" name="q16" value="dustin"> Inventor or engineer</label>
+</div>
+
+<div class="question">
+  <p>17. Choose your Upside Down survival tactic:</p>
+  <label><input type="radio" name="q17" value="hopper"> Guns blazing, lead the charge</label>
+  <label><input type="radio" name="q17" value="will"> Blend in, stay quiet</label>
+  <label><input type="radio" name="q17" value="nancy"> Scout and plan tactically</label>
+  <label><input type="radio" name="q17" value="eleven"> Go solo and face the threat head-on</label>
+</div>
+
+<div class="question">
+  <p>18. If stuck in a lab, what's your first instinct?</p>
+  <label><input type="radio" name="q18" value="papa"> Take control of the experiment</label>
+  <label><input type="radio" name="q18" value="murray"> Hack into their systems</label>
+  <label><input type="radio" name="q18" value="argyle"> Meditate and find an escape route</label>
+  <label><input type="radio" name="q18" value="lucas"> Break a window and run</label>
+</div>
+
+<div class="question">
+  <p>19. Pick a snack:</p>
+  <label><input type="radio" name="q19" value="dustin"> Pudding</label>
+  <label><input type="radio" name="q19" value="argyle"> Pineapple pizza</label>
+  <label><input type="radio" name="q19" value="eleven"> Eggo waffles</label>
+  <label><input type="radio" name="q19" value="mike"> Peanut butter sandwich</label>
+</div>
+
+<div class="question">
+  <p>20. What is your dark side?</p>
+  <label><input type="radio" name="q20" value="vecna"> You seek control through fear</label>
+  <label><input type="radio" name="q20" value="papa"> You think ends justify the means</label>
+  <label><input type="radio" name="q20" value="nancy"> You struggle with trust</label>
+  <label><input type="radio" name="q20" value="jonathan"> You tend to shut everyone out</label>
+</div>
+
+
+      <button type="submit">Reveal Your Stranger Things Character</button>
+    </form>
+  </div>
+
+  <script src="scripts/stranger.js"></script>
+</body>
+</html>
