@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hogwarts Sorting Hat Quiz</title>
+  <link rel="stylesheet" href="style/hogwarts.css" />
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+</head>
+<body class="hogwarts-bg">
+
+  <!-- Harry Potter Theme Music -->
+  <audio id="themeAudio" autoplay loop>
+    <source src="sounds/hogwarts/harry_potter_paino.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1> Hogwarts Sorting Hat Quiz</h1>
+    <form id="quizForm">
+
+      <div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">1. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>1. How do you handle failure?</p>
+    <label><input type="radio" name="q1" value="gryffindor"> I stand back up. Every time.</label>
+    <label><input type="radio" name="q1" value="ravenclaw"> I learn from it and try again smarter.</label>
+    <label><input type="radio" name="q1" value="slytherin"> I use it to make a stronger comeback.</label>
+    <label><input type="radio" name="q1" value="hufflepuff"> I let myself feel it, then move on gently.</label>
+  </div>
+</div>
+
+<div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">2. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>2. What matters most in your personal life?</p>
+    <label><input type="radio" name="q2" value="hufflepuff"> Loyalty to my close people</label>
+    <label><input type="radio" name="q2" value="slytherin"> Chasing dreams no matter what</label>
+    <label><input type="radio" name="q2" value="ravenclaw"> Meaningful conversations and deep thinking</label>
+    <label><input type="radio" name="q2" value="gryffindor"> Protecting and standing up for what's right</label>
+  </div>
+</div>
+
+<div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">3. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>3. What’s your dream work environment?</p>
+    <label><input type="radio" name="q3" value="gryffindor"> Fast-paced, exciting, full of challenge</label>
+    <label><input type="radio" name="q3" value="ravenclaw"> Quiet, independent, idea-focused</label>
+    <label><input type="radio" name="q3" value="slytherin"> Strategic, high reward, leadership-focused</label>
+    <label><input type="radio" name="q3" value="hufflepuff"> Friendly, safe, cooperative team</label>
+  </div>
+</div>
+
+<div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">4. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>4. How do your friends describe you?</p>
+    <label><input type="radio" name="q4" value="gryffindor"> Brave and bold</label>
+    <label><input type="radio" name="q4" value="ravenclaw"> Calm and thoughtful</label>
+    <label><input type="radio" name="q4" value="slytherin"> Ambitious and persuasive</label>
+    <label><input type="radio" name="q4" value="hufflepuff"> Kind and reliable</label>
+  </div>
+</div>
+
+<div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">5. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>5. What excites you the most about the future?</p>
+    <label><input type="radio" name="q5" value="gryffindor"> Adventures, risks, and standing up for causes</label>
+    <label><input type="radio" name="q5" value="ravenclaw"> Exploring knowledge, ideas, and new skills</label>
+    <label><input type="radio" name="q5" value="slytherin"> Power, success, and climbing to the top</label>
+    <label><input type="radio" name="q5" value="hufflepuff"> A peaceful life with people I love</label>
+  </div>
+</div>
+
+<div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">6. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>6. What would you do if you found a magical item no one else knows about?</p>
+    <label><input type="radio" name="q6" value="gryffindor"> Use it to protect others or fight injustice</label>
+    <label><input type="radio" name="q6" value="ravenclaw"> Study it to understand how it works</label>
+    <label><input type="radio" name="q6" value="slytherin"> Keep it secret and use it to your advantage</label>
+    <label><input type="radio" name="q6" value="hufflepuff"> Share it with friends and use it responsibly</label>
+  </div>
+</div>
+
+<div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">7. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>7. What kind of people do you admire the most?</p>
+    <label><input type="radio" name="q7" value="gryffindor"> Brave, courageous, and bold individuals</label>
+    <label><input type="radio" name="q7" value="ravenclaw"> Wise, curious, and open-minded thinkers</label>
+    <label><input type="radio" name="q7" value="slytherin"> Ambitious, strategic, and driven leaders</label>
+    <label><input type="radio" name="q7" value="hufflepuff"> Loyal, kind, and selfless companions</label>
+  </div>
+</div>
+
+<div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">8. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>8. Which magical class at Hogwarts would you be most excited about?</p>
+    <label><input type="radio" name="q8" value="gryffindor"> Defense Against the Dark Arts</label>
+    <label><input type="radio" name="q8" value="ravenclaw"> Ancient Runes or Arithmancy</label>
+    <label><input type="radio" name="q8" value="slytherin"> Potions or Dark Arts Theory</label>
+    <label><input type="radio" name="q8" value="hufflepuff"> Herbology or Care of Magical Creatures</label>
+  </div>
+</div>
+
+<div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">9. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>9. You see someone cheating in a magical exam. What do you do?</p>
+    <label><input type="radio" name="q9" value="gryffindor"> Confront them — it's wrong and unfair</label>
+    <label><input type="radio" name="q9" value="ravenclaw"> Observe quietly — maybe there's something to learn</label>
+    <label><input type="radio" name="q9" value="slytherin"> Ignore it — it’s their risk, not your problem</label>
+    <label><input type="radio" name="q9" value="hufflepuff"> Talk to them later — they might need help</label>
+  </div>
+</div>
+
+<div class="envelope" onclick="toggleOptions(this)">
+  <div class="envelope-front">10. Click to reveal question</div>
+  <div class="envelope-content hidden">
+    <p>10. If you had a Time-Turner and could visit any point in time, what would you do?</p>
+    <label><input type="radio" name="q10" value="gryffindor"> Change something to save someone or fix a wrong</label>
+    <label><input type="radio" name="q10" value="ravenclaw"> Watch a major event in history unfold</label>
+    <label><input type="radio" name="q10" value="slytherin"> Gain knowledge or secrets to help your future</label>
+    <label><input type="radio" name="q10" value="hufflepuff"> Relive a special memory with loved ones</label>
+  </div>
+</div>
+
+      <button type="submit">Reveal My House 🧢</button>
+    </form>
+
+  <script src="scripts/hogwarts.js"></script>
+</body>
+</html>
