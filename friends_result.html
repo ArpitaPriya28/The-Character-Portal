@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your F.R.I.E.N.D.S Match</title>
+  <link rel="stylesheet" href="style/friends_result.css">
+</head>
+<body class="friends-bg"><!-- Applies background styling -->
+  <div class="container"><!-- Main content box. -->
+    <h1>Your F.R.I.E.N.D.S Match</h1>
+    <div id="result" class="result-box"></div><!-- Placeholder for dynamic result text (which character the user matches). -->
+    <button onclick="window.location.href='friends.html'">🔁 Try Again</button><!-- Reloads the quiz so the user can try again. 
+window.location.href controls the current page URL.
+Setting it to 'friends.html' redirects the user to that page. So when someone clicks the button, the browser navigates to friends.html. -->
+  </div>
+
+
+
+  <!-- Character Audio Clips -->
+  <audio id="rossAudio" src="sounds/friends/friends_ross.mp3"></audio>
+  <audio id="rachelAudio" src="sounds/friends/rachel.mp3"></audio>
+  <audio id="monicaAudio" src="sounds/friends/monica_gellerrrr.mp3"></audio>
+  <audio id="chandlerAudio" src="sounds/friends/chandler_bing_bing.mp3"></audio>
+  <audio id="joeyAudio" src="sounds/friends/joey_how_you_doin.mp3"></audio>
+  <audio id="phoebeAudio" src="sounds/friends/smellycat_1.mp3"></audio>
+
+
+  <script>
+    /* localStorage.getItem() → This retrieves data stored in the browser’s localStorage using the given key.
+"friendsCharacter" → This is the key that was previously saved (e.g., when the user finished the quiz).
+const character = ... → Stores the retrieved value in a variable called character. */
+    const character = localStorage.getItem("friendsCharacter");
+    /* document.getElementById() → Finds an HTML element with the id you provide.
+"result" → The id of the element where you want to display the result.
+const resultDiv = ... → Stores a reference to that element in the variable resultDiv. */
+    const resultDiv = document.getElementById("result");
+
+
+
+    if (character) {
+      const capitalized = character.charAt(0).toUpperCase() + character.slice(1);
+      /* character.charAt(0) → Gets the first letter of the character’s name.
+.toUpperCase() → Converts that first letter to uppercase.
+character.slice(1) → Gets the rest of the string (from the second letter to the end).
++ → Combines the uppercase first letter with the rest. */
+      resultDiv.textContent = `You're most like ${capitalized}!`;
+      /* resultDiv → Refers to the <div> where you want to show the result.
+.textContent → Sets the text inside that div.
+`You're most like ${capitalized}!` → Template literal that inserts the capitalized character name into the string. */
+
+
+
+/* Selects the correct <audio> element by concatenating character name + "Audio" */
+      const audio = document.getElementById(character + "Audio");
+      /* document.getElementById() → Finds an HTML element with the given id.
+character + "Audio" → Dynamically creates the id of the audio element.
+If character = "joey", then character + "Audio" → "joeyAudio" */
+      if (audio) {
+        window.addEventListener("DOMContentLoaded", () => {/* Waits for the page to fully load. */
+          audio.play().catch(err => console.log("Autoplay blocked:", err));
+        });/* Handles autoplay restrictions in some browsers (e.g., Chrome blocks autoplay without user interaction). */
+      }
+    } else {
+      resultDiv.textContent = "No result found. Please take the quiz first.";
+      /* If localStorage.getItem("friendsCharacter") is empty, the page shows a message telling the user to take the quiz first.
+Prevents errors if someone opens friends_result.html directly. */
+    }
+  </script>
+</body>
+</html>
