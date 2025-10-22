@@ -3,6 +3,8 @@
 The Character Portal is an interactive web experience that lets users discover which iconic character they resemble from different universes — like Narnia, Hogwarts, Game of Thrones, Friends, and Stranger Things.
 Each quiz features unique styling, music, animations, and immersive result pages that bring the chosen world to life.
 
+
+
 ✨ Features
 
 🎭 Multiple Themed Quizzes — Choose from Narnia, Hogwarts, Game of Thrones, Friends, and Stranger Things.
@@ -16,6 +18,8 @@ Each quiz features unique styling, music, animations, and immersive result pages
 🧠 Personality-Based Results — Each answer contributes to your final character reveal.
 
 💻 Clean Code Structure — Separate HTML, CSS, and JS files for each quiz for easy understanding and scalability.
+
+
 
 🗂️ Project Structure
 Character Portal/
@@ -57,6 +61,8 @@ Character Portal/
     ├── audio/
     └── fonts/
 
+    
+
 🧩 Technologies Used
 
 HTML5 – structure
@@ -68,6 +74,8 @@ JavaScript (ES6) – quiz logic and result calculation
 LocalStorage API – result persistence
 
 Custom Audio & Fonts – for immersive user experience
+
+
 
 🚀 How to Run
 
@@ -82,11 +90,14 @@ Select any quiz you want
 
 Answer the questions and reveal your character!
 
+
+
 🧙‍♀️ Future Enhancements
 
 Include AI-based personality prediction
 
 Add more universes like Marvel, DC, and Percy Jackson
+
 
 🪄 Author
 
