@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 60px 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Creates a vertical layout using Flexbox. */
+.card-wrapper {
+  display: flex;
+  flex-direction: column;/* Each card is stacked vertically (flex-direction: column). */
+  gap: 40px;/* Adds 40px of spacing between each card (gap) */
+  align-items: center;
+  padding: 20px 10px 80px;
+}
+
+/* This defines how each fandom banner (Harry Potter, Narnia, etc.) looks */
+.fandom-section {
+  width: 90%; /* Takes 90% of screen */
+  max-width: 800px;/* max 700px — responsive for all devices. */
+  height: 300px;/* banner-style block. height of the banner of each image on 1st page */
+  background-size: cover; /* cover ensures image fills the block proportionally. */
+  background-position: center;/* It ensures that the middle part of the image stays visible, even if the container is resized. */
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;/* Arrange the items inside this box in a line (side by side or top to bottom). */
+  align-items: flex-end;/* Move everything to the bottom inside the box */
+  justify-content: center;/* Keep everything in the center horizontally */
+  padding-bottom: 90px;/* ensures space below the clickable card. */
+}
+
+/* This is the clickable button inside each fandom banner: */
+.card {
+  background-color: papayawhip;
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;/* Slight animation on hover */
+}
+
+.card:hover {
+  transform: scale(1.05);/* On hover, card slightly zooms in (scale 1.05) and changes color to light gray.This gives a 3D pop-out effect when users hover. */
+  background-color: #f0f0f0;
+}
+
+/* 🎬 Individual fandom background images */
+.harry {
+  background-image: url('images/hogwarts.jpg');
+}
+
+.narnia {
+  background-image: url('images/narnia.jpg');
+}
+
+.friends {
+  background-image: url('images/friends.jpg');
+}
+
+.got {
+  background-image: url('images/GOT.jpg');
+}
+
+.stranger {
+  background-image: url('images/stranger.jpg');
+}
+
+.marvel {
+  background-image: url('images/marvel.jpg');
+}
